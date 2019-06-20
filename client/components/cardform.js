@@ -33,15 +33,6 @@ Vue.component("input-form", {
     }
   },
   template: `
-  <div>
-  <h5>1) Please input your background card</h5>
-  <form class="form" @submit.prevent="submitInput">
-    <div class="form-group">
-      <label>Upload a picture</label>
-      <input type="file" @change="previewFile" id="submitbg" class="form-control-file">
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
-  </div>
+  
   `
 });

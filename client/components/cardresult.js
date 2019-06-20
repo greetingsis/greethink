@@ -55,28 +55,22 @@ Vue.component("result-card", {
     </div>
     <br>
     <div class="row p-3">
-      <div class="col"
+      <div class="col">
         <button type="button" class="btn btn-lg btn-primary" @click.prevent="screenshot"> Save</button> 
       </div>
       <div class="col" v-if="fburl">
         <div class="fb-share-button" v-bind:data-href="url" data-layout="button_count" data-size="small">
-          <button><a v-bind:href="fburl" class="fb-xfbml-parse-ignore">Share on Facebook</a></button>
+          <a v-bind:href="fburl" target="_blank" class="fb-xfbml-parse-ignore">Share on Facebook</a>
         </div>
       </div>
       <div class="col" v-if="twurl">
-        <button>
-          <a v-bind:href="twurl"> Share on Twitter</a>
-        </button>
+          <a target="_blank" v-bind:href="twurl"> Share on Twitter</a>
       </div>
       <div class="col" v-if="linurl">
-        <button>
-          <a v-bind:href="linurl">Share on LinkedIn</a>
-        </button>
+          <a target="_blank" v-bind:href="linurl">Share on LinkedIn</a>
       </div>
       <div class="col" v-if="url">
-        <button>
-          <a v-bind:href="url" download="myimage">Download</a>
-        </button>
+          <a v-bind:href="url" target="_blank"  download="myimage">Download</a>
       </div>
     </div>
   </div>
