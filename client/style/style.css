@@ -2,15 +2,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 html {
   font-size: 10px;
   font-family: "Roboto Cn", sans-serif;
+  height: 100%;
 }
 
 body {
   position: relative;
+  height: 100%;
 }
 
 nav {
@@ -126,12 +129,38 @@ nav ul li a:hover::after {
 }
 
 .bg-image {
-  height: 100%;
-  background-image: url("https://images.unsplash.com/photo-1556823172-e8de9a93e1f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1566&q=80");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  filter: blur(2px);
+  height: 110%;
+  background:linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1)), url('http://alluae.ae/wp-content/uploads/2017/04/List-of-the-Top-Greeting-Card-Stores-in-Sharjah-with-Contact-Details.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+#registerText {
+  font-family: 'Fredoka One', cursive;
+  margin-top: 10%;
+}
+
+#registerText p{
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+}
+#registerText button{
+  color: #ffffff;
+  font-family: 'Fredoka One', cursive;
+}
+
+#registerText h1{
+  margin-top: -15px;
+  color: #ffffff;
+  text-shadow: 2px 2px #000000;
+}
+
+#registerText span{
+margin-top: -15px;
+color: #E93D36;
+font-family: 'Pacifico', cursive;
 }
 
 .bg-text {

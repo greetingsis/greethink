@@ -3,6 +3,7 @@ const baseURL = "http://localhost:3000";
 var app = new Vue({
   el: "#app",
   data: {
+    canvasTemplate: "",
     card: "",
     image: "",
     message: "",
@@ -23,7 +24,13 @@ var app = new Vue({
     text2: ""
   },
   methods: {
+    generateTemplate(event){
+    
+        $("#canvas").css("background-image", 'url("' + this.canvasTemplate + '")');
+      
+    },
     generatecard(el) {
+      
       var file = el.image;
       var reader = new FileReader();
       reader.onloadend = function() {

@@ -11,15 +11,18 @@ Vue.component("input-form", {
   },
   methods: {
     previewFile: function(event) {
+      console.log(event.target.files[0], "asdasdasd");
+      
       this.image = event.target.files[0];
+      
     },
     submitInput: function() {
       console.log("disini");
-      console.log(this.recipient, this.message);
       this.$emit("newcard", {
         to: this.recipient,
         text: this.message,
         image: this.image
+
       });
       this.recipient = "";
       this.message = "";
@@ -40,7 +43,7 @@ Vue.component("input-form", {
       <label>Upload a picture</label>
       <input type="file" @change="previewFile" id="submitbg" class="form-control-file">
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">submit</button>
   </form>
   </div>
   `
