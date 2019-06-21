@@ -4,3 +4,5 @@ package-lock.json
 gcloudstoragekey.json
 ./client/dist
 ./client/.cache
+/dist
+/.cache
