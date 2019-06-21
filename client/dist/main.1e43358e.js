@@ -9481,6 +9481,18 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default = {
   data: {
     card: "",
@@ -9559,642 +9571,595 @@ exports.default = _default;
               "div",
               { staticClass: "row", staticStyle: { "align-items": "center" } },
               [
+                _c("center", { staticClass: "w-100 d-flex" }, [
+                  _c("div", { staticClass: "container-fluid p-5" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-lg-8",
+                        style: { color: _vm.textColor }
+                      },
+                      [
+                        _c(
+                          "h1",
+                          {
+                            staticClass: "text-center",
+                            staticStyle: {
+                              "letter-spacing": "0px",
+                              color: "black !important"
+                            }
+                          },
+                          [_vm._v("Card Preview")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "cardresult",
+                          {
+                            attrs: {
+                              i: _vm.card.image,
+                              m: _vm.card.message,
+                              t: _vm.card.to
+                            }
+                          },
+                          [
+                            _c(
+                              "h1",
+                              {
+                                class: _vm.styling,
+                                staticStyle: { position: "relative" },
+                                style: {
+                                  top: _vm.top + "px",
+                                  right: _vm.right + "px",
+                                  width: _vm.width + "px",
+                                  height: _vm.height + "px",
+                                  fontFamily: _vm.fontStyle,
+                                  fontSize: _vm.fontSize + "px"
+                                }
+                              },
+                              [_vm._v(_vm._s(_vm.text))]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "h1",
+                              {
+                                class: _vm.styling,
+                                staticStyle: { position: "relative" },
+                                style: {
+                                  top: _vm.top + "px",
+                                  right: _vm.right + "px",
+                                  width: _vm.width + "px",
+                                  height: _vm.height + "px",
+                                  fontFamily: _vm.fontStyle,
+                                  fontSize: _vm.fontSize + "px"
+                                }
+                              },
+                              [_vm._v(_vm._s(_vm.text2))]
+                            )
+                          ]
+                        )
+                      ],
+                      1
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
                 _c(
                   "div",
-                  { staticClass: "col-lg" },
+                  { staticClass: "col-lg-12" },
                   [
-                    _c(
-                      "h1",
-                      {
-                        staticClass: "mt-4 text-center",
-                        staticStyle: { "letter-spacing": "0px" }
-                      },
-                      [_vm._v("Create Your Own Card")]
-                    ),
-                    _vm._v(" "),
-                    _c("br"),
-                    _vm._v(" "),
                     _c("cardform", { on: { newcard: _vm.generatecard } }),
                     _vm._v(" "),
                     _c("br"),
                     _vm._v(" "),
-                    _c("h5", [_vm._v("2) Please choose or adjust your style")]),
-                    _vm._v(" "),
-                    _c("label", [_vm._v("Select Style")]),
-                    _vm._v(" "),
-                    _c(
-                      "select",
-                      {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.fontStyle,
-                            expression: "fontStyle"
-                          }
-                        ],
-                        staticClass: "custom-select",
-                        on: {
-                          change: function($event) {
-                            var $$selectedVal = Array.prototype.filter
-                              .call($event.target.options, function(o) {
-                                return o.selected
-                              })
-                              .map(function(o) {
-                                var val = "_value" in o ? o._value : o.value
-                                return val
-                              })
-                            _vm.fontStyle = $event.target.multiple
-                              ? $$selectedVal
-                              : $$selectedVal[0]
-                          }
-                        }
-                      },
-                      [
-                        _c(
-                          "option",
-                          {
-                            attrs: {
-                              value: "'Aref Ruqaa', serif",
-                              selected: ""
-                            }
-                          },
-                          [_vm._v("Aref Ruqaa (Arabic)")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "option",
-                          { attrs: { value: "'Reem Kufi', sans-serif" } },
-                          [_vm._v("Reem Kufi(Arabic)")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "option",
-                          { attrs: { value: "'Lemonada', cursive" } },
-                          [_vm._v("Lemonada(Arabic)")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "option",
-                          { attrs: { value: "'Cairo', sans-serif" } },
-                          [_vm._v("Cairo(Arabic)")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "option",
-                          { attrs: { value: "'Tajawal', sans-serif" } },
-                          [_vm._v("Tajawal(Arabic)")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "option",
-                          {
-                            staticClass: "dropdown-item",
-                            attrs: {
-                              value:
-                                "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif",
-                              href: "#"
-                            }
-                          },
-                          [_vm._v("'Franklin Gothic Medium'")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "option",
-                          {
-                            staticClass: "dropdown-item",
-                            attrs: {
-                              value: "'Courier New', Courier, monospace",
-                              href: "#"
-                            }
-                          },
-                          [_vm._v("'Courier New'")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "option",
-                          {
-                            staticClass: "dropdown-item",
-                            attrs: {
-                              value:
-                                "'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif",
-                              href: "#"
-                            }
-                          },
-                          [_vm._v("'Lucida Sans'")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "option",
-                          {
-                            staticClass: "dropdown-item",
-                            attrs: {
-                              value:
-                                "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-                              href: "#"
-                            }
-                          },
-                          [_vm._v("'Segoe UI'")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "option",
-                          {
-                            staticClass: "dropdown-item",
-                            attrs: {
-                              value: "'Times New Roman', Times, serif",
-                              href: "#"
-                            }
-                          },
-                          [_vm._v("'Times New Roman'")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "option",
-                          {
-                            staticClass: "dropdown-item",
-                            attrs: {
-                              value:
-                                "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif",
-                              href: "#"
-                            }
-                          },
-                          [_vm._v("'Trebuchet MS'")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "option",
-                          {
-                            staticClass: "dropdown-item",
-                            attrs: {
-                              value:
-                                "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
-                              href: "#"
-                            }
-                          },
-                          [_vm._v("-apple-system")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "option",
-                          {
-                            staticClass: "dropdown-item",
-                            attrs: {
-                              value: "Arial, Helvetica, sans-serif",
-                              href: "#"
-                            }
-                          },
-                          [_vm._v("Arial")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "option",
-                          {
-                            staticClass: "dropdown-item",
-                            attrs: {
-                              value:
-                                "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif",
-                              href: "#"
-                            }
-                          },
-                          [_vm._v("Cambria")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "option",
-                          {
-                            staticClass: "dropdown-item",
-                            attrs: {
-                              value: "Georgia, 'Times New Roman', Times, serif",
-                              href: "#"
-                            }
-                          },
-                          [_vm._v("Georgia")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "option",
-                          {
-                            staticClass: "dropdown-item",
-                            attrs: {
-                              value:
-                                "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif",
-                              href: "#"
-                            }
-                          },
-                          [_vm._v("Impact")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "option",
-                          {
-                            staticClass: "dropdown-item",
-                            attrs: {
-                              value: "Verdana, Geneva, Tahoma, sans-serif",
-                              href: "#"
-                            }
-                          },
-                          [_vm._v("Verdana")]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("label", { staticClass: "mt-3", attrs: { for: "" } }, [
-                      _vm._v("Your Message")
+                    _c("h5", { staticClass: "mt-2" }, [
+                      _vm._v("2) Please choose or adjust your style")
                     ]),
                     _vm._v(" "),
-                    _c("br"),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
+                    _c("div", { staticClass: "col-12" }, [
+                      _c(
+                        "div",
                         {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.text,
-                          expression: "text"
-                        }
-                      ],
-                      staticClass: "form-control",
-                      attrs: { type: "text", name: "" },
-                      domProps: { value: _vm.text },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.text = $event.target.value
-                        }
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("label", { staticClass: "mt-3", attrs: { for: "" } }, [
-                      _vm._v("Your Message")
-                    ]),
-                    _vm._v(" "),
-                    _c("br"),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.text,
-                          expression: "text"
-                        }
-                      ],
-                      staticClass: "form-control",
-                      attrs: { type: "text", name: "" },
-                      domProps: { value: _vm.text },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.text = $event.target.value
-                        }
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("label", { staticClass: "mt-3" }, [
-                      _vm._v("Select Effect")
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "select",
-                      {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.styling,
-                            expression: "styling"
-                          }
-                        ],
-                        staticClass: "custom-select",
-                        on: {
-                          change: function($event) {
-                            var $$selectedVal = Array.prototype.filter
-                              .call($event.target.options, function(o) {
-                                return o.selected
-                              })
-                              .map(function(o) {
-                                var val = "_value" in o ? o._value : o.value
-                                return val
-                              })
-                            _vm.styling = $event.target.multiple
-                              ? $$selectedVal
-                              : $$selectedVal[0]
-                          }
-                        }
-                      },
-                      [
-                        _c("option", { attrs: { value: "outlined" } }, [
-                          _vm._v("Outlined")
-                        ]),
-                        _vm._v(" "),
-                        _c("option", { attrs: { value: "engraved" } }, [
-                          _vm._v("Engraved")
-                        ]),
-                        _vm._v(" "),
-                        _c("option", { attrs: { value: "embossed" } }, [
-                          _vm._v("Embossed")
-                        ]),
-                        _vm._v(" "),
-                        _c("option", { attrs: { value: "rainbows" } }, [
-                          _vm._v("Rainbows")
-                        ]),
-                        _vm._v(" "),
-                        _c("option", { attrs: { value: "stickers" } }, [
-                          _vm._v("Stickers")
-                        ]),
-                        _vm._v(" "),
-                        _c("option", { attrs: { value: "thickness" } }, [
-                          _vm._v("Thickness")
-                        ]),
-                        _vm._v(" "),
-                        _c("option", { attrs: { value: "thic" } }, [
-                          _vm._v("3D")
-                        ])
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "mt-3" }, [
-                      _c("div", { staticClass: "col" }, [
-                        _c("div", { staticClass: "row" }, [
-                          _c(
-                            "label",
-                            {
-                              staticClass: "col-sm-3 my-1",
-                              attrs: { for: "" }
-                            },
-                            [_vm._v("Y Axis Position")]
-                          ),
-                          _vm._v(" "),
-                          _c("input", {
-                            directives: [
+                          staticClass:
+                            "row align-items-start justify-content-around"
+                        },
+                        [
+                          _c("div", [
+                            _c("label", [_vm._v("Select Style")]),
+                            _vm._v(" "),
+                            _c("br"),
+                            _vm._v(" "),
+                            _c(
+                              "select",
                               {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.top,
-                                expression: "top"
-                              }
-                            ],
-                            staticClass: "form-control",
-                            attrs: { type: "number", name: "" },
-                            domProps: { value: _vm.top },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.fontStyle,
+                                    expression: "fontStyle"
+                                  }
+                                ],
+                                on: {
+                                  change: function($event) {
+                                    var $$selectedVal = Array.prototype.filter
+                                      .call($event.target.options, function(o) {
+                                        return o.selected
+                                      })
+                                      .map(function(o) {
+                                        var val =
+                                          "_value" in o ? o._value : o.value
+                                        return val
+                                      })
+                                    _vm.fontStyle = $event.target.multiple
+                                      ? $$selectedVal
+                                      : $$selectedVal[0]
+                                  }
                                 }
-                                _vm.top = $event.target.value
-                              }
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "row" }, [
-                          _c(
-                            "label",
-                            {
-                              staticClass: "col-sm-3 my-1",
-                              attrs: { for: "" }
-                            },
-                            [_vm._v("X Axis Position")]
-                          ),
+                              },
+                              [
+                                _c(
+                                  "option",
+                                  {
+                                    attrs: {
+                                      value: "'Aref Ruqaa', serif",
+                                      selected: ""
+                                    }
+                                  },
+                                  [_vm._v("Aref Ruqaa (Arabic)")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "option",
+                                  {
+                                    attrs: { value: "'Reem Kufi', sans-serif" }
+                                  },
+                                  [_vm._v("Reem Kufi(Arabic)")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "option",
+                                  { attrs: { value: "'Lemonada', cursive" } },
+                                  [_vm._v("Lemonada(Arabic)")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "option",
+                                  { attrs: { value: "'Cairo', sans-serif" } },
+                                  [_vm._v("Cairo(Arabic)")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "option",
+                                  { attrs: { value: "'Tajawal', sans-serif" } },
+                                  [_vm._v("Tajawal(Arabic)")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "option",
+                                  {
+                                    staticClass: "dropdown-item",
+                                    attrs: {
+                                      value:
+                                        "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif",
+                                      href: "#"
+                                    }
+                                  },
+                                  [_vm._v("'Franklin Gothic Medium'")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "option",
+                                  {
+                                    staticClass: "dropdown-item",
+                                    attrs: {
+                                      value:
+                                        "'Courier New', Courier, monospace",
+                                      href: "#"
+                                    }
+                                  },
+                                  [_vm._v("'Courier New'")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "option",
+                                  {
+                                    staticClass: "dropdown-item",
+                                    attrs: {
+                                      value:
+                                        "'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif",
+                                      href: "#"
+                                    }
+                                  },
+                                  [_vm._v("'Lucida Sans'")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "option",
+                                  {
+                                    staticClass: "dropdown-item",
+                                    attrs: {
+                                      value:
+                                        "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+                                      href: "#"
+                                    }
+                                  },
+                                  [_vm._v("'Segoe UI'")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "option",
+                                  {
+                                    staticClass: "dropdown-item",
+                                    attrs: {
+                                      value: "'Times New Roman', Times, serif",
+                                      href: "#"
+                                    }
+                                  },
+                                  [_vm._v("'Times New Roman'")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "option",
+                                  {
+                                    staticClass: "dropdown-item",
+                                    attrs: {
+                                      value:
+                                        "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif",
+                                      href: "#"
+                                    }
+                                  },
+                                  [_vm._v("'Trebuchet MS'")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "option",
+                                  {
+                                    staticClass: "dropdown-item",
+                                    attrs: {
+                                      value:
+                                        "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+                                      href: "#"
+                                    }
+                                  },
+                                  [_vm._v("-apple-system")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "option",
+                                  {
+                                    staticClass: "dropdown-item",
+                                    attrs: {
+                                      value: "Arial, Helvetica, sans-serif",
+                                      href: "#"
+                                    }
+                                  },
+                                  [_vm._v("Arial")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "option",
+                                  {
+                                    staticClass: "dropdown-item",
+                                    attrs: {
+                                      value:
+                                        "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif",
+                                      href: "#"
+                                    }
+                                  },
+                                  [_vm._v("Cambria")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "option",
+                                  {
+                                    staticClass: "dropdown-item",
+                                    attrs: {
+                                      value:
+                                        "Georgia, 'Times New Roman', Times, serif",
+                                      href: "#"
+                                    }
+                                  },
+                                  [_vm._v("Georgia")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "option",
+                                  {
+                                    staticClass: "dropdown-item",
+                                    attrs: {
+                                      value:
+                                        "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif",
+                                      href: "#"
+                                    }
+                                  },
+                                  [_vm._v("Impact")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "option",
+                                  {
+                                    staticClass: "dropdown-item",
+                                    attrs: {
+                                      value:
+                                        "Verdana, Geneva, Tahoma, sans-serif",
+                                      href: "#"
+                                    }
+                                  },
+                                  [_vm._v("Verdana")]
+                                )
+                              ]
+                            )
+                          ]),
                           _vm._v(" "),
-                          _c("input", {
-                            directives: [
+                          _c("div", [
+                            _c("label", [_vm._v("Your Message")]),
+                            _vm._v(" "),
+                            _c("br"),
+                            _vm._v(" "),
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.text,
+                                  expression: "text"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              attrs: { type: "text", name: "" },
+                              domProps: { value: _vm.text },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.text = $event.target.value
+                                }
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", [
+                            _c("label", [_vm._v("Select Effect")]),
+                            _vm._v(" "),
+                            _c("br"),
+                            _vm._v(" "),
+                            _c(
+                              "select",
                               {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.right,
-                                expression: "right"
-                              }
-                            ],
-                            staticClass: "form-control",
-                            attrs: { type: "number", name: "" },
-                            domProps: { value: _vm.right },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.styling,
+                                    expression: "styling"
+                                  }
+                                ],
+                                on: {
+                                  change: function($event) {
+                                    var $$selectedVal = Array.prototype.filter
+                                      .call($event.target.options, function(o) {
+                                        return o.selected
+                                      })
+                                      .map(function(o) {
+                                        var val =
+                                          "_value" in o ? o._value : o.value
+                                        return val
+                                      })
+                                    _vm.styling = $event.target.multiple
+                                      ? $$selectedVal
+                                      : $$selectedVal[0]
+                                  }
                                 }
-                                _vm.right = $event.target.value
-                              }
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "row" }, [
-                          _c(
-                            "label",
-                            {
-                              staticClass: "col-sm-3 my-1",
-                              attrs: { for: "" }
-                            },
-                            [_vm._v("Container Width")]
-                          ),
+                              },
+                              [
+                                _c("option", { attrs: { value: "outlined" } }, [
+                                  _vm._v("Outlined")
+                                ]),
+                                _vm._v(" "),
+                                _c("option", { attrs: { value: "engraved" } }, [
+                                  _vm._v("Engraved")
+                                ]),
+                                _vm._v(" "),
+                                _c("option", { attrs: { value: "embossed" } }, [
+                                  _vm._v("Embossed")
+                                ]),
+                                _vm._v(" "),
+                                _c("option", { attrs: { value: "rainbows" } }, [
+                                  _vm._v("Rainbows")
+                                ]),
+                                _vm._v(" "),
+                                _c("option", { attrs: { value: "stickers" } }, [
+                                  _vm._v("Stickers")
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "option",
+                                  { attrs: { value: "thickness" } },
+                                  [_vm._v("Thickness")]
+                                ),
+                                _vm._v(" "),
+                                _c("option", { attrs: { value: "thic" } }, [
+                                  _vm._v("3D")
+                                ])
+                              ]
+                            )
+                          ]),
                           _vm._v(" "),
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.width,
-                                expression: "width"
-                              }
-                            ],
-                            staticClass: "form-control",
-                            attrs: { type: "number", name: "" },
-                            domProps: { value: _vm.width },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
+                          _c("div", [
+                            _c("label", [_vm._v("Y Axis Position")]),
+                            _vm._v(" "),
+                            _c("br"),
+                            _vm._v(" "),
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.top,
+                                  expression: "top"
                                 }
-                                _vm.width = $event.target.value
-                              }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("br"),
-                          _vm._v(" "),
-                          _c(
-                            "label",
-                            {
-                              staticClass: "col-sm-3 my-1",
-                              attrs: { for: "" }
-                            },
-                            [_vm._v("Container Height")]
-                          ),
-                          _vm._v(" "),
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.height,
-                                expression: "height"
-                              }
-                            ],
-                            staticClass: "form-control",
-                            attrs: { type: "number", name: "" },
-                            domProps: { value: _vm.height },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
+                              ],
+                              staticClass: "form-control",
+                              attrs: { type: "number", name: "" },
+                              domProps: { value: _vm.top },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.top = $event.target.value
                                 }
-                                _vm.height = $event.target.value
                               }
-                            }
-                          }),
+                            })
+                          ]),
                           _vm._v(" "),
-                          _c("br")
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "row" }, [
-                          _c(
-                            "label",
-                            {
-                              staticClass: "col-sm-3 my-1",
-                              attrs: { for: "" }
-                            },
-                            [_vm._v("Font Size")]
-                          ),
-                          _vm._v(" "),
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.fontSize,
-                                expression: "fontSize"
-                              }
-                            ],
-                            staticClass: "form-control",
-                            attrs: { type: "number", name: "" },
-                            domProps: { value: _vm.fontSize },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
+                          _c("div", [
+                            _c("label", [_vm._v("X Axis Position")]),
+                            _vm._v(" "),
+                            _c("br"),
+                            _vm._v(" "),
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.right,
+                                  expression: "right"
                                 }
-                                _vm.fontSize = $event.target.value
-                              }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("br"),
-                          _vm._v(" "),
-                          _c(
-                            "label",
-                            {
-                              staticClass: "col-sm-3 my-1",
-                              attrs: { for: "head" }
-                            },
-                            [_vm._v("Text")]
-                          ),
-                          _vm._v(" "),
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.textColor,
-                                expression: "textColor"
-                              }
-                            ],
-                            staticClass: "form-control",
-                            attrs: { type: "color" },
-                            domProps: { value: _vm.textColor },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
+                              ],
+                              staticClass: "form-control",
+                              attrs: { type: "number", name: "" },
+                              domProps: { value: _vm.right },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.right = $event.target.value
                                 }
-                                _vm.textColor = $event.target.value
                               }
-                            }
-                          })
-                        ])
-                      ])
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", [
+                            _c("label", [_vm._v("Container Width")]),
+                            _vm._v(" "),
+                            _c("br"),
+                            _vm._v(" "),
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.width,
+                                  expression: "width"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              attrs: { type: "number", name: "" },
+                              domProps: { value: _vm.width },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.width = $event.target.value
+                                }
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", [
+                            _c("label", [_vm._v("Container Height")]),
+                            _vm._v(" "),
+                            _c("br"),
+                            _vm._v(" "),
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.height,
+                                  expression: "height"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              attrs: { type: "number", name: "" },
+                              domProps: { value: _vm.height },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.height = $event.target.value
+                                }
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", [
+                            _c("label", [_vm._v("Font Size")]),
+                            _vm._v(" "),
+                            _c("br"),
+                            _vm._v(" "),
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.fontSize,
+                                  expression: "fontSize"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              attrs: { type: "number", name: "" },
+                              domProps: { value: _vm.fontSize },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.fontSize = $event.target.value
+                                }
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", [
+                            _c("label", [_vm._v("Color")]),
+                            _vm._v(" "),
+                            _c("br"),
+                            _vm._v(" "),
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.textColor,
+                                  expression: "textColor"
+                                }
+                              ],
+                              attrs: { type: "color" },
+                              domProps: { value: _vm.textColor },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.textColor = $event.target.value
+                                }
+                              }
+                            })
+                          ])
+                        ]
+                      )
                     ])
                   ],
                   1
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "col-md-12 col-lg-8 mt-4",
-                    style: { color: _vm.textColor }
-                  },
-                  [
-                    _c(
-                      "h1",
-                      {
-                        staticClass: "text-center",
-                        staticStyle: {
-                          "letter-spacing": "0px",
-                          color: "black !important"
-                        }
-                      },
-                      [_vm._v("Card Preview")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "cardresult",
-                      {
-                        attrs: {
-                          i: _vm.card.image,
-                          m: _vm.card.message,
-                          t: _vm.card.to
-                        }
-                      },
-                      [
-                        _c(
-                          "h1",
-                          {
-                            class: _vm.styling,
-                            staticStyle: { position: "relative" },
-                            style: {
-                              top: _vm.top + "px",
-                              right: _vm.right + "px",
-                              width: _vm.width + "px",
-                              height: _vm.height + "px",
-                              fontFamily: _vm.fontStyle,
-                              fontSize: _vm.fontSize + "px"
-                            }
-                          },
-                          [_vm._v(_vm._s(_vm.text))]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "h1",
-                          {
-                            class: _vm.styling,
-                            staticStyle: { position: "relative" },
-                            style: {
-                              top: _vm.top + "px",
-                              right: _vm.right + "px",
-                              width: _vm.width + "px",
-                              height: _vm.height + "px",
-                              fontFamily: _vm.fontStyle,
-                              fontSize: _vm.fontSize + "px"
-                            }
-                          },
-                          [_vm._v(_vm._s(_vm.text2))]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _vm._m(1)
-                  ],
-                  1
                 )
-              ]
+              ],
+              1
             )
           ])
         ])
@@ -10208,7 +10173,7 @@ exports.default = _default;
             "div",
             { staticClass: "bg-text" },
             [
-              _vm._m(2),
+              _vm._m(1),
               _vm._v(" "),
               _c("transition", { attrs: { name: "slide-fade" } }, [
                 _c(
@@ -10262,14 +10227,6 @@ var staticRenderFns = [
           )
         ])
       ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { attrs: { id: "ss" } }, [
-      _c("div", { attrs: { id: "subss" } })
     ])
   },
   function() {
@@ -10369,7 +10326,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39429" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38537" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
