@@ -2,36 +2,39 @@
 
 <template>
   <div>
-    <nav>
-      <h1 class="brand"></h1>
-      <ul>
-        <li>
-          <a
-            class="ml-5"
-            style=" text-decoration: none;color: white"
-            href="#"
-            data-toggle="modal"
-            data-target="#exampleModalLong"
-          >
-            Kartu
-            <span style="color:crimson">Ilahi</span>
-          </a>
-        </li>
-      </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:#455268">
+        <a class="navbar-brand" href="#">
+            <img src="https://cdn.pixabay.com/photo/2014/04/02/10/38/heart-304085_960_720.png" width="20" height="20"
+                class="d-inline-block " alt="">
+            <b>Greethink</b>
+
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul id="navbarLoginLogout" class="navbar-nav ml-auto">
+                
+
+            </ul>
+
+        </div>
     </nav>
 
     <!-- FORM DAN CARD YG DI HTML  -->
-    <div v-if="page == 'card'">
-      <div class="container-fluid">
+    <div v-if="page == 'card' " style="background-image: url('/asset/cloudy-day.png');"  >
+      <div class="container-fluid" >
         <div class="row" style="align-items: center;">
           <center class="w-100 d-flex">
             <div class="container-fluid p-5">
               <div class="col-lg-8" v-bind:style="{ color: textColor }">
                 <h1
-                  class="text-center"
-                  style="letter-spacing:0px; color: black !important"
-                >Card Preview</h1>
-                <cardresult :i="card.image" :m="card.message" :t="card.to">
+                  class="text-center text-anuan"
+                  style="letter-spacing:0px !important"
+                >Design Your Card</h1>
+                <cardresult :i="canvasTemplate" :m="card.message" :t="card.to">
                   <h1
                     v-bind:style="{ top:top + 'px', right:right + 'px', width:width  + 'px', height:height + 'px', fontFamily: fontStyle, fontSize: fontSize + 'px' }"
                     style="position: relative"
@@ -48,11 +51,9 @@
             </div>
           </center>
           <div class="col-lg-12">
-            <cardform v-on:newcard="generatecard"></cardform>
-
+            
             <!-- DROP DOWN FONT -->
-            <br>
-            <h5 class="mt-2">2) Please choose or adjust your style</h5>
+            
             <div class="col-12">
               <div class="row align-items-start justify-content-around">
                 <div>
@@ -174,41 +175,63 @@
                   <br>
                   <input type="color" v-model="textColor">
                 </div>
+                <div>
+                  <label class="col-sm-3 my-1" for="head">Template</label>
+                    <select  v-model="canvasTemplate" class="form-control" id="exampleFormControlSelect1" style="margin-bottom:  200px">
+                      <option :value="JSON.stringify(assets[1].png)">Birhday Template 1</option>
+                      <option :value="JSON.stringify(assets[2].png)">Birhday Template 2</option>
+                      <option :value="JSON.stringify(assets[3].png)">Birhday Template 3</option>
+                      <option :value="JSON.stringify(assets[4].png)">Birhday Template 4</option>
+                      <option :value="JSON.stringify(assets[5].png)">Birhday Template 5</option>
+                      <option :value="JSON.stringify(assets[6].png)">New Born 1</option>
+                      <option :value="JSON.stringify(assets[7].png)">New Born 2</option>
+                      <option :value="JSON.stringify(assets[8].png)">New Born 3</option>
+                      <option :value="JSON.stringify(assets[9].png)">New Born 4</option>
+                      <option :value="JSON.stringify(assets[10].png)">Eid Mubarak 1</option>
+                      <option :value="JSON.stringify(assets[11].png)">Eid Mubarak 2</option>
+                      <option :value="JSON.stringify(assets[12].png)">Nyepi Template 2</option>
+                      <option :value="JSON.stringify(assets[13].png)">Wedding Template 1</option>
+                      <option :value="JSON.stringify(assets[14].png)">Wedding Template 1</option>
+                    </select>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
+  
     <!-- LANDING PAGE -->
+
     <div id="home" v-if="page == 'home'">
-      <div class="bg-image"></div>
-      <div class="bg-text">
-        <p class="py-5" style="letter-spacing:1px;font-size:12px;">
-          <i>
-            <q>
-              Andai jemari tak sempat berjabat. Jika raga tak bisa bersua.
-              Bila Ada kata membekas luka. Semoga pintu maaf masih terbuka.
-            </q>
-            <br>
-            <br>Selamat Idul Fitri 1440 H
-          </i>
-        </p>
-        <transition name="slide-fade">
-          <button @click.prevent="showCard" class="ghost-button-full-color">Get Free Card</button>
-        </transition>
+      <div class="bg-image">
+            <div id="registerText" class="col-md-5" style="padding-top:250px;">
+                <h1>Send All Your</h1>
+                <h1><span>Love</span> With Card</h1>
+                <div class="smallText">
+                    <p style="color:#383838">Easily customize greeting cards for every event. Print or send as eCard  to your special one for free !</p>
+                    <button @click.prevent="showCard" type="button" class="btn btn-lg"
+                        style="background-color:#455268">Get Started - It's Free</button>
+                </div>
+                
+
+            </div>
+       
       </div>
+      
     </div>
   </div>
 </template>
 
 <script>
+import assets from '../asset/*.*';
+
 import cardresult from "./cardresult";
 import cardform from "./cardform";
 
 export default {
   data: {
+    canvasTemplate: "",
     card: "",
     image: "",
     message: "",
@@ -226,13 +249,25 @@ export default {
     text: "",
     textColor: "#000000",
     styling: "",
-    text2: ""
+    text2: "",
+    assets: assets,
   },
   components: {
     cardresult,
     cardform
   },
+  created(){
+    },
+  mounted(){
+    console.log(this.assets)
+
+  },
   methods: {
+    // generateTemplate(event){
+    
+    //     // $("#canvas").css("background-image", 'url("' + this.canvasTemplate + '")');
+      
+    // },
     generatecard(el) {
       var file = el.image;
       var reader = new FileReader();

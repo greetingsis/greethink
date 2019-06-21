@@ -1,7 +1,7 @@
 
 
 <template>
-  <div>
+  <div >
     <div class="box" id="canvas" :style="{'background-image': 'url('+i+')'}">
       <div class="container">
         <br>
@@ -14,42 +14,37 @@
       </div>
     </div>
     <br>
-    <div class="row p-3">
+ <div class="row p-3">
       <div class="col">
-        <button type="button" class="btn btn-lg btn-primary" @click.prevent="screenshot">Save</button>
+        <button type="button" class="btn btn-lg btn-primary" @click.prevent="screenshot"><i class="fas fa-save"></i> <span> Save</span></button>
       </div>
       <div class="col" v-if="fburl">
-        <div
-          class="fb-share-button"
-          v-bind:data-href="url"
-          data-layout="button_count"
-          data-size="small"
-        >
-          <button>
-            <a v-bind:href="fburl" class="fb-xfbml-parse-ignore">Share on Facebook</a>
-          </button>
-        </div>
+        <button type="button" class= "btn" id="fb-share-button">
+          <a v-bind:href="fburl"><i class="fab fa-facebook-f"></i> <span>Share on Facebook </span></a>
+        </button>
       </div>
       <div class="col" v-if="twurl">
-        <button>
-          <a v-bind:href="twurl">Share on Twitter</a>
+        <button type="button" class= "btn" id="twitter-share-button">
+          <a v-bind:href="twurl"><i class="fab fa-twitter"></i> <span>Share on Twitter </span></a>
         </button>
       </div>
       <div class="col" v-if="linurl">
-        <button>
-          <a v-bind:href="linurl">Share on LinkedIn</a>
+        <button type="button" class= "btn" id="linkedin-share-button">
+          <a v-bind:href="linurl"><i class="fab fa-linkedin-in"></i> <span> Share on LinkedIn</span></a>
         </button>
       </div>
       <div class="col" v-if="url">
-        <button>
-          <a v-bind:href="url" download="myimage">Download</a>
+        <button type="button" class= "btn" id="download-button">
+          <a v-bind:href="url" download="myimage"><i class="fas fa-download"></i> <span> Download </span></a>
         </button>
       </div>
     </div>
+    
   </div>
 </template>
 
 <script>
+
 export default {
   props: ["i", "m", "t"],
   data() {
@@ -57,10 +52,9 @@ export default {
       fburl: "",
       url: "",
       twurl: "",
-      linurl: ""
+      linurl: "",
     };
   },
-  created() {},
   methods: {
     screenshot() {
       console.log("screenshot layar");
